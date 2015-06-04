@@ -1,0 +1,78 @@
+<?php
+
+class CountriesTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('countries')->delete();
+
+        $countries = array(
+            array('id' => 1, 'code' => 'AX', 'name' => 'Aland', 'flag' => '/img/flags/aland.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 2, 'code' => 'AL', 'name' => 'Albania', 'flag' => '/img/flags/albania.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 3, 'code' => 'DZ', 'name' => 'Algeria', 'flag' => '/img/flags/algeria.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 4, 'code' => 'AD', 'name' => 'Andorra', 'flag' => '/img/flags/andorra.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 5, 'code' => 'AT', 'name' => 'Austria', 'flag' => '/img/flags/austria.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 6, 'code' => 'BY', 'name' => 'Belarus', 'flag' => '/img/flags/belarus.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 7, 'code' => 'BE', 'name' => 'Belgium', 'flag' => '/img/flags/belgium.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 8, 'code' => 'BA', 'name' => 'Bosnia and Herzegovina', 'flag' => '/img/flags/bosnia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 9, 'code' => 'BG', 'name' => 'Bulgaria', 'flag' => '/img/flags/bulgaria.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 10, 'code' => 'HR', 'name' => 'Croatia', 'flag' => '/img/flags/croatia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 11, 'code' => 'CY', 'name' => 'Cyprus', 'flag' => '/img/flags/cyprus.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 12, 'code' => 'CZ', 'name' => 'Czech Republic', 'flag' => '/img/flags/czech.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 13, 'code' => 'DK', 'name' => 'Denmark', 'flag' => '/img/flags/denmark.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 14, 'code' => 'EG', 'name' => 'Egypt', 'flag' => '/img/flags/egypt.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 15, 'code' => 'EE', 'name' => 'Estonia', 'flag' => '/img/flags/estonia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 16, 'code' => 'FO', 'name' => 'Faroe Islands', 'flag' => '/img/flags/faroe.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 17, 'code' => 'FI', 'name' => 'Finland', 'flag' => '/img/flags/finland.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 18, 'code' => 'FR', 'name' => 'France', 'flag' => '/img/flags/france.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 19, 'code' => 'GE', 'name' => 'Georgia', 'flag' => '/img/flags/georgia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 20, 'code' => 'DE', 'name' => 'Germany', 'flag' => '/img/flags/germany.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 21, 'code' => 'GR', 'name' => 'Greece', 'flag' => '/img/flags/greece.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 22, 'code' => 'GG', 'name' => 'Guernsey', 'flag' => '/img/flags/guernsey.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 23, 'code' => 'HU', 'name' => 'Hungary', 'flag' => '/img/flags/hungary.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 24, 'code' => 'IS', 'name' => 'Iceland', 'flag' => '/img/flags/iceland.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 25, 'code' => 'IQ', 'name' => 'Iraq', 'flag' => '/img/flags/iraq.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 26, 'code' => 'IE', 'name' => 'Ireland', 'flag' => '/img/flags/ireland.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 27, 'code' => 'IM', 'name' => 'Isle of Man', 'flag' => '/img/flags/man.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 28, 'code' => 'IL', 'name' => 'Israel', 'flag' => '/img/flags/israel.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 29, 'code' => 'IT', 'name' => 'Italy', 'flag' => '/img/flags/italy.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 30, 'code' => 'JE', 'name' => 'Jersey', 'flag' => '/img/flags/jersey.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 31, 'code' => 'JO', 'name' => 'Jordan', 'flag' => '/img/flags/jordan.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 32, 'code' => '_0', 'name' => 'Kosovo', 'flag' => '/img/flags/kosovo.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 33, 'code' => 'LV', 'name' => 'Latvia', 'flag' => '/img/flags/latvia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 34, 'code' => 'LB', 'name' => 'Lebanon', 'flag' => '/img/flags/lebanon.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 35, 'code' => 'LY', 'name' => 'Libya', 'flag' => '/img/flags/libya.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 36, 'code' => 'LI', 'name' => 'Liechtenstein', 'flag' => '/img/flags/liechtenstein.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 37, 'code' => 'LT', 'name' => 'Lithuania', 'flag' => '/img/flags/lithuania.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 38, 'code' => 'LU', 'name' => 'Luxembourg', 'flag' => '/img/flags/luxembourg.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 39, 'code' => 'MK', 'name' => 'Macedonia', 'flag' => '/img/flags/macedonia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 40, 'code' => 'MT', 'name' => 'Malta', 'flag' => '/img/flags/malta.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 41, 'code' => 'MD', 'name' => 'Moldova', 'flag' => '/img/flags/moldova.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 42, 'code' => 'ME', 'name' => 'Montenegro', 'flag' => '/img/flags/montenegro.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 43, 'code' => 'MA', 'name' => 'Morocco', 'flag' => '/img/flags/morocco.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 44, 'code' => '-99', 'name' => 'Northern Cyprus', 'flag' => '/img/flags/n_cyprus.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 45, 'code' => 'NL', 'name' => 'Netherlands', 'flag' => '/img/flags/netherlands.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 46, 'code' => 'NO', 'name' => 'Norway', 'flag' => '/img/flags/norway.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 47, 'code' => 'PS', 'name' => 'Palestine', 'flag' => '/img/flags/palestine.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 48, 'code' => 'PL', 'name' => 'Poland', 'flag' => '/img/flags/poland.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 49, 'code' => 'PT', 'name' => 'Portugal', 'flag' => '/img/flags/portugal.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 50, 'code' => 'RO', 'name' => 'Romania', 'flag' => '/img/flags/romania.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 51, 'code' => 'RU', 'name' => 'Russian Federation', 'flag' => '/img/flags/russia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 52, 'code' => 'SM', 'name' => 'San Marino', 'flag' => '/img/flags/san_marino.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 53, 'code' => 'SA', 'name' => 'Saudi Arabia', 'flag' => '/img/flags/saudi_arabia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 54, 'code' => 'RS', 'name' => 'Serbia', 'flag' => '/img/flags/serbia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 55, 'code' => 'SK', 'name' => 'Slovakia', 'flag' => '/img/flags/slovakia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 56, 'code' => 'SI', 'name' => 'Slovenia', 'flag' => '/img/flags/slovenia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 57, 'code' => 'ES', 'name' => 'Spain', 'flag' => '/img/flags/spain.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 58, 'code' => 'SE', 'name' => 'Sweden', 'flag' => '/img/flags/sweden.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 59, 'code' => 'CH', 'name' => 'Switzerland', 'flag' => '/img/flags/swiss.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 60, 'code' => 'SY', 'name' => 'Syrian Arab Republic', 'flag' => '/img/flags/syria.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 61, 'code' => 'TN', 'name' => 'Tunisia', 'flag' => '/img/flags/tunisia.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 62, 'code' => 'TR', 'name' => 'Turkey', 'flag' => '/img/flags/turkey.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 63, 'code' => 'UA', 'name' => 'Ukraine', 'flag' => '/img/flags/ukraine.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+            array('id' => 64, 'code' => 'GB', 'name' => 'United Kingdom', 'flag' => '/img/flags/uk.png', 'created_at' => '2015-06-01 17:18:50', 'updated_at' => '2015-06-01 17:18:50'),
+        );
+
+        DB::table('countries')->insert($countries);
+    }
+}
